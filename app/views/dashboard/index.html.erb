@@ -1,4 +1,36 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1>Graficos</h1>
 
+<h3><strong>Grafico ventas ultimos 12 meses:</strong></h3>
+<%= line_chart @sales_group_by_month %>
 
+<h3><strong>Cantidad de ventas(q) ultimos 12 meses</strong></h3>
+<%= column_chart @sales_group_by_month_quantity %>
+
+<h3><strong>Promedio de ventas ultimos 12 meses</strong></h3>
+<%= line_chart @average_sales_group_by_month %>
+
+<h2>Graficos de torta Ventas</h2>
+<h3><strong> Q ventas de ultimos 12 meses </strong></h3>
+<%= pie_chart @sales_grouped_by_origin%>
+
+<h3><strong>Q ventas ultimos 6 meses </strong></h3>
+<%=pie_chart @sales_grouped_by_origin6 %>
+
+<h3><strong>Q ventas ultimos 3 meses </strong></h3>
+<%=pie_chart @sales_grouped_by_origin3 %>
+
+<h3><strong>Q ventas ultimo mes </strong></h3>
+<%=pie_chart @sales_grouped_by_origin1 %>
+
+<h2>Graficos de torta Cantidad</h2>
+<h3><strong> Q ultimos 12 meses </strong></h3>
+<%= pie_chart @sales_grouped_by_name %>
+
+<h3><strong> Q ultimos 6 meses </strong></h3>
+<%= pie_chart @sales_grouped_by_name6 %>
+
+<h3><strong> Q ultimos 3 meses </strong></h3>
+<%= pie_chart @sales_grouped_by_name3 %>
+
+<h3><strong> Q ultimo mes </strong></h3>
+<%= pie_chart @sales_grouped_by_name1 %>
